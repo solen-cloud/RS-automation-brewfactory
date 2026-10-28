@@ -1,0 +1,122 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><style>
+@font-face{font-family:"Bodoni";src:url("file:///home/claude/rs-automation-brewfactory/fonts/BodoniFLF-Bold.ttf");font-weight:700}
+@font-face{font-family:"Bodoni";src:url("file:///home/claude/rs-automation-brewfactory/fonts/BodoniFLF-Roman.ttf");font-weight:400}
+@font-face{font-family:"Bodoni";src:url("file:///home/claude/rs-automation-brewfactory/fonts/BodoniFLF-Italic.ttf");font-weight:400;font-style:italic}
+@font-face{font-family:"Hanken";src:url("file:///home/claude/rs-automation-brewfactory/fonts/HankenGrotesk-Regular.ttf");font-weight:400}
+@font-face{font-family:"Hanken";src:url("file:///home/claude/rs-automation-brewfactory/fonts/HankenGrotesk-Medium.ttf");font-weight:500}
+@font-face{font-family:"Hanken";src:url("file:///home/claude/rs-automation-brewfactory/fonts/HankenGrotesk-SemiBold.ttf");font-weight:600}
+@font-face{font-family:"Hanken";src:url("file:///home/claude/rs-automation-brewfactory/fonts/HankenGrotesk-Bold.ttf");font-weight:700}
+@font-face{font-family:"Hanken";src:url("file:///home/claude/rs-automation-brewfactory/fonts/HankenGrotesk-ExtraBold.ttf");font-weight:800}
+:root{
+  --bg:#FDEDE6; --yellow:#F5AA16; --orange:#FFB35C; --peach:#FFCF92;
+  --brown:#2E1A0E; --soft:#FCDDB4; --cream:#FFF8F2;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#ccc;font-family:"Hanken";color:var(--brown)}
+.slide{width:1080px;height:1350px;background:var(--bg);position:relative;overflow:hidden;margin:20px auto}
+.badge{position:absolute;top:64px;left:72px;background:var(--yellow);color:var(--brown);font:800 46px/1 "Hanken";padding:16px 26px;border-radius:10px;z-index:3}
+.dots{position:absolute;display:grid;grid-template-columns:repeat(3,14px);gap:26px;z-index:2}
+.dots i{width:14px;height:14px;border-radius:50%;background:var(--yellow);display:block}
+.wave{position:absolute;left:0;bottom:0;width:1080px;height:300px;z-index:1}
+.content{position:absolute;inset:0;z-index:2;padding:0 90px}
+h1,h2{font-family:"Bodoni";font-weight:700;letter-spacing:-0.5px;line-height:1.02}
+.acc{color:var(--yellow)}
+.kicker{font:700 30px/1.2 "Hanken";letter-spacing:4px;text-transform:uppercase}
+.rule{width:150px;height:10px;border-radius:6px;background:var(--yellow)}
+p{font:400 34px/1.4 "Hanken"}
+b{font-weight:700}
+.handle{position:absolute;bottom:58px;right:80px;z-index:3;font:600 26px/1 "Hanken";letter-spacing:1px;color:var(--brown)}
+.swipe{position:absolute;bottom:58px;left:90px;z-index:3;font:700 28px/1 "Hanken";display:flex;align-items:center;gap:14px}
+svg .s{fill:none;stroke:var(--brown);stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+
+.card{background:var(--cream);border:3px solid var(--brown);border-radius:16px}
+.ttl{font:800 32px/1.15 'Hanken'}
+.txt{font:400 27px/1.35 'Hanken'}
+.pill{display:inline-block;background:var(--yellow);font:800 26px/1 'Hanken';padding:12px 20px;border-radius:999px}
+.num{position:relative;z-index:2;width:64px;height:64px;border-radius:50%;background:var(--yellow);border:3px solid var(--brown);display:flex;align-items:center;justify-content:center;font:800 30px/1 'Hanken';flex:none}
+.logo{position:absolute;z-index:4}
+</style></head><body><section class="slide" id="s1"><div class="badge">1/6</div><div class="dots" style="top:70px;right:80px"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="content">
+<div class="kicker" style="position:absolute;top:230px;left:90px">Hygiène</div>
+<h1 style="position:absolute;top:290px;left:90px;font-size:120px;width:920px">Le <span class="acc">CIP</span>,<br>le poste qu'on<br>sous-estime.</h1>
+<div class="rule" style="position:absolute;top:690px;left:90px"></div>
+<p style="position:absolute;top:735px;left:90px;width:440px">Un mauvais nettoyage est l'une des <b>premières causes de bière contaminée</b>.</p>
+<svg style="position:absolute;top:620px;left:540px" width="500" height="480" viewBox="0 0 500 480">
+  <circle cx="260" cy="220" r="200" fill="var(--soft)"/>
+  <!-- chariot -->
+  <rect class="s" x="60" y="300" width="330" height="22" rx="6" fill="var(--brown)"/>
+  <circle class="s" cx="100" cy="350" r="22" fill="var(--cream)"/><circle class="s" cx="350" cy="350" r="22" fill="var(--cream)"/>
+  <!-- 2 cuves CIP -->
+  <path class="s" d="M80 140 q0 -28 50 -28 q50 0 50 28 v160 h-100 z" fill="var(--cream)"/>
+  <rect x="84" y="200" width="92" height="98" fill="var(--yellow)"/>
+  <path class="s" d="M80 140 q0 -28 50 -28 q50 0 50 28 v160 h-100 z"/>
+  <path class="s" d="M210 140 q0 -28 50 -28 q50 0 50 28 v160 h-100 z" fill="var(--cream)"/>
+  <rect x="214" y="220" width="92" height="78" fill="var(--orange)"/>
+  <path class="s" d="M210 140 q0 -28 50 -28 q50 0 50 28 v160 h-100 z"/>
+  <!-- pompe + armoire -->
+  <circle class="s" cx="350" cy="270" r="26" fill="var(--yellow)"/><path class="s" d="M350 244 v-30 h-40"/>
+  <rect class="s" x="330" y="130" width="70" height="80" rx="6" fill="var(--cream)"/>
+  <circle cx="350" cy="152" r="6" fill="var(--yellow)"/><circle cx="378" cy="152" r="6" fill="var(--orange)"/><path class="s" d="M344 178 h44 M344 194 h30" style="stroke-width:3"/>
+  <!-- flexible -->
+  <path class="s" d="M376 270 q80 0 80 -80 q0 -70 -50 -110" style="stroke-width:6"/>
+  <!-- bulles -->
+  <circle class="s" cx="120" cy="80" r="12" fill="var(--cream)" style="stroke-width:3"/><circle class="s" cx="150" cy="52" r="8" fill="var(--cream)" style="stroke-width:3"/>
+  <circle class="s" cx="250" cy="70" r="10" fill="var(--cream)" style="stroke-width:3"/><circle class="s" cx="280" cy="40" r="6" fill="var(--cream)" style="stroke-width:3"/>
+</svg></div><svg class="wave" viewBox="0 0 1080 300" preserveAspectRatio="none"><path d="M0 170 C260 90 460 230 700 150 C860 95 980 120 1080 90 V300 H0z" fill="var(--orange)"/><path d="M0 235 C300 170 520 290 780 220 C920 185 1010 200 1080 190 V300 H0z" fill="var(--peach)"/></svg><div class="swipe">Faites défiler <svg width="44" height="24" viewBox="0 0 44 24"><path class="s" d="M2 12 h38 M30 3 l10 9 l-10 9"/></svg></div></section><section class="slide" id="s2"><div class="badge">2/6</div><div class="dots" style="top:70px;right:80px"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="content">
+<div class="kicker" style="position:absolute;top:200px;left:0;right:0;text-align:center">Cleaning In Place</div>
+<h2 style="position:absolute;top:255px;left:0;right:0;text-align:center;font-size:92px">Le CIP,<br><span class="acc">c'est quoi&nbsp;?</span></h2>
+<div class="rule" style="position:absolute;top:485px;left:465px"></div>
+<p style="position:absolute;top:540px;left:120px;width:840px;text-align:center;font-size:36px">Nettoyer et désinfecter votre installation <b>sans rien démonter</b>&nbsp;:</p>
+<div style="position:absolute;top:700px;left:90px;width:900px;display:flex;gap:20px">
+  <div style="flex:1;text-align:center"><svg width="150" height="150" viewBox="0 0 150 150"><circle cx="75" cy="75" r="72" fill="var(--soft)"/><path class="s" d="M45 50 q0 -14 30 -14 q30 0 30 14 v60 h-60z" fill="var(--yellow)"/></svg><div class="ttl" style="margin-top:16px">Les cuves</div></div>
+  <div style="flex:1;text-align:center"><svg width="150" height="150" viewBox="0 0 150 150"><circle cx="75" cy="75" r="72" fill="var(--soft)"/><path class="s" d="M50 40 q0 -12 25 -12 q25 0 25 12 v50 l-25 20 l-25 -20z" fill="var(--orange)"/><path class="s" d="M56 96 l-4 22 M94 96 l4 22"/></svg><div class="ttl" style="margin-top:16px">Les fermenteurs</div></div>
+  <div style="flex:1;text-align:center"><svg width="150" height="150" viewBox="0 0 150 150"><circle cx="75" cy="75" r="72" fill="var(--soft)"/><path class="s" d="M30 60 h50 q14 0 14 14 v40" style="stroke-width:10;stroke:var(--yellow)"/><path class="s" d="M30 52 h50 q22 0 22 22 v40 M30 68 h50 q6 0 6 6 v40"/></svg><div class="ttl" style="margin-top:16px">La tuyauterie</div></div>
+</div>
+<div class="card" style="position:absolute;top:1000px;left:90px;width:900px;padding:28px 34px;text-align:center"><div class="txt" style="font-size:30px">Le but&nbsp;: une <b>hygiène maîtrisée</b> et une <b>qualité constante</b>, brassin après brassin.</div></div>
+</div><svg class="wave" viewBox="0 0 1080 300" preserveAspectRatio="none"><path d="M0 245 C260 200 460 290 700 238 C860 205 980 212 1080 195 V300 H0z" fill="var(--orange)"/><path d="M0 280 C300 250 520 300 780 278 C920 265 1010 270 1080 265 V300 H0z" fill="var(--peach)"/></svg></section><section class="slide" id="s3"><div class="badge">3/6</div><div class="dots" style="top:70px;right:80px"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="content">
+<div class="kicker" style="position:absolute;top:200px;left:90px">Un cycle type</div>
+<h2 style="position:absolute;top:255px;left:90px;font-size:92px;width:920px">5 étapes,<br><span class="acc">à chaque fois.</span></h2>
+<div style="position:absolute;top:510px;left:90px;width:900px">
+  <div style="position:absolute;left:37px;top:36px;bottom:90px;width:3px;background-image:linear-gradient(var(--yellow) 50%,transparent 50%);background-size:3px 14px"></div>
+  <div style="display:flex;gap:30px;align-items:center;margin-bottom:44px">
+  <div class="num" style="width:76px;height:76px;font-size:36px">1</div><div><div class="ttl" style="font-size:38px">Pré-rinçage</div><div class="txt" style="margin-top:6px;font-size:31px">À l'eau, pour évacuer les résidus</div></div></div><div style="display:flex;gap:30px;align-items:center;margin-bottom:44px">
+  <div class="num" style="width:76px;height:76px;font-size:36px">2</div><div><div class="ttl" style="font-size:38px">Soude chaude (≈ 1 %)</div><div class="txt" style="margin-top:6px;font-size:31px">Elle dissout levures et protéines</div></div></div><div style="display:flex;gap:30px;align-items:center;margin-bottom:44px">
+  <div class="num" style="width:76px;height:76px;font-size:36px">3</div><div><div class="ttl" style="font-size:38px">Rinçage intermédiaire</div><div class="txt" style="margin-top:6px;font-size:31px">On évacue la soude</div></div></div><div style="display:flex;gap:30px;align-items:center;margin-bottom:44px">
+  <div class="num" style="width:76px;height:76px;font-size:36px">4</div><div><div class="ttl" style="font-size:38px">Acide peracétique (≈ 0,2 %)</div><div class="txt" style="margin-top:6px;font-size:31px">Il désinfecte et détartre</div></div></div><div style="display:flex;gap:30px;align-items:center;margin-bottom:44px">
+  <div class="num" style="width:76px;height:76px;font-size:36px">5</div><div><div class="ttl" style="font-size:38px">Rinçage final</div><div class="txt" style="margin-top:6px;font-size:31px">À l'eau propre</div></div></div>
+</div>
+</div><svg class="wave" viewBox="0 0 1080 300" preserveAspectRatio="none"><path d="M0 245 C260 200 460 290 700 238 C860 205 980 212 1080 195 V300 H0z" fill="var(--orange)"/><path d="M0 280 C300 250 520 300 780 278 C920 265 1010 270 1080 265 V300 H0z" fill="var(--peach)"/></svg></section><section class="slide" id="s4"><div class="badge">4/6</div><div class="dots" style="top:70px;right:80px"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="content">
+<div class="kicker" style="position:absolute;top:200px;left:0;right:0;text-align:center">Le match</div>
+<h2 style="position:absolute;top:255px;left:0;right:0;text-align:center;font-size:92px">Manuel ou<br><span class="acc">automatique&nbsp;?</span></h2>
+<div style="position:absolute;top:500px;left:90px;width:900px;display:flex;gap:24px">
+  <div class="card" style="flex:1;padding:32px 28px;background:var(--cream)">
+  <div style="font:800 30px/1.1 'Hanken';text-transform:uppercase">Manuel</div>
+  <div style="font:700 76px/1 'Bodoni';margin:22px 0 4px">45-60 min</div>
+  <div class="txt" style="font-size:24px">par cuve</div><div class="txt" style="font-size:26px;margin-top:14px">• Qualité qui dépend de l'opérateur</div><div class="txt" style="font-size:26px;margin-top:14px">• Manipulation de produits concentrés</div><div class="txt" style="font-size:26px;margin-top:14px">• Aucun équipement dédié au départ</div></div>
+  <div class="card" style="flex:1;padding:32px 28px;background:var(--yellow)">
+  <div style="font:800 30px/1.1 'Hanken';text-transform:uppercase">Station auto 100 L</div>
+  <div style="font:700 76px/1 'Bodoni';margin:22px 0 4px">12-18 min</div>
+  <div class="txt" style="font-size:24px">par cuve</div><div class="txt" style="font-size:26px;margin-top:14px">• Cycles répétables, programmés</div><div class="txt" style="font-size:26px;margin-top:14px">• ≈ 40 % d'eau et de produits en moins</div><div class="txt" style="font-size:26px;margin-top:14px">• Moins de contact avec la chimie</div></div>
+</div>
+</div><svg class="wave" viewBox="0 0 1080 300" preserveAspectRatio="none"><path d="M0 245 C260 200 460 290 700 238 C860 205 980 212 1080 195 V300 H0z" fill="var(--orange)"/><path d="M0 280 C300 250 520 300 780 278 C920 265 1010 270 1080 265 V300 H0z" fill="var(--peach)"/></svg></section><section class="slide" id="s5"><div class="badge">5/6</div><div class="dots" style="top:70px;right:80px"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="content">
+<div class="kicker" style="position:absolute;top:200px;left:90px">Bonnes pratiques</div>
+<h2 style="position:absolute;top:255px;left:90px;font-size:92px;width:920px">Les règles<br><span class="acc">d'or.</span></h2>
+<div style="position:absolute;top:510px;left:90px;width:900px">
+  <div class="card" style="display:flex;gap:22px;align-items:center;padding:24px 28px;margin-bottom:22px"><svg width="44" height="44" viewBox="0 0 40 40" style="flex:none"><circle cx="20" cy="20" r="18" fill="var(--yellow)"/><path class="s" d="M12 20 l6 6 l10 -12" style="stroke-width:4"/></svg><div class="txt" style="font-size:29px">Nettoyez vos cuves <b>après chaque brassin</b>.</div></div><div class="card" style="display:flex;gap:22px;align-items:center;padding:24px 28px;margin-bottom:22px"><svg width="44" height="44" viewBox="0 0 40 40" style="flex:none"><circle cx="20" cy="20" r="18" fill="var(--yellow)"/><path class="s" d="M12 20 l6 6 l10 -12" style="stroke-width:4"/></svg><div class="txt" style="font-size:29px">Nettoyez vos fermenteurs <b>après chaque transfert</b>.</div></div><div class="card" style="display:flex;gap:22px;align-items:center;padding:24px 28px;margin-bottom:22px"><svg width="44" height="44" viewBox="0 0 40 40" style="flex:none"><circle cx="20" cy="20" r="18" fill="var(--yellow)"/><path class="s" d="M12 20 l6 6 l10 -12" style="stroke-width:4"/></svg><div class="txt" style="font-size:29px">Ne laissez pas de moût dans une cuve <b>plus de 4 h environ</b>.</div></div><div class="card" style="display:flex;gap:22px;align-items:center;padding:24px 28px;margin-bottom:22px"><svg width="44" height="44" viewBox="0 0 40 40" style="flex:none"><circle cx="20" cy="20" r="18" fill="var(--yellow)"/><path class="s" d="M12 20 l6 6 l10 -12" style="stroke-width:4"/></svg><div class="txt" style="font-size:29px">Vous voulez automatiser&nbsp;? Intégrez la station <b>dès la commande initiale</b> : l'ajouter après oblige à reprendre la tuyauterie.</div></div>
+</div>
+</div><svg class="wave" viewBox="0 0 1080 300" preserveAspectRatio="none"><path d="M0 245 C260 200 460 290 700 238 C860 205 980 212 1080 195 V300 H0z" fill="var(--orange)"/><path d="M0 280 C300 250 520 300 780 278 C920 265 1010 270 1080 265 V300 H0z" fill="var(--peach)"/></svg></section><section class="slide" id="s6"><div class="badge">6/6</div><div class="dots" style="top:70px;right:80px"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="content">
+<svg style="position:absolute;top:110px;left:410px" width="260" height="270" viewBox="0 0 260 270">
+  <circle cx="130" cy="140" r="115" fill="var(--soft)"/>
+  <path class="s" d="M80 80 q0 -26 50 -26 q50 0 50 26 v110 l-50 38 l-50 -38 z" fill="var(--cream)"/>
+  <path class="s" d="M100 92 v70" style="stroke:var(--yellow);stroke-width:8"/>
+  <path class="s" d="M200 40 l6 14 l14 6 l-14 6 l-6 14 l-6 -14 l-14 -6 l14 -6z" fill="var(--yellow)"/>
+  <path class="s" d="M50 120 l4 10 l10 4 l-10 4 l-4 10 l-4 -10 l-10 -4 l10 -4z" fill="var(--orange)"/>
+  <path class="s" d="M210 160 l3 7 l7 3 l-7 3 l-3 7 l-3 -7 l-7 -3 l7 -3z" fill="var(--yellow)"/>
+</svg>
+<h2 style="position:absolute;top:410px;left:0;right:0;text-align:center;font-size:88px">Alors, manuel<br><span class="acc">ou automatique&nbsp;?</span></h2>
+<div style="position:absolute;top:640px;left:90px;width:900px;display:flex;gap:24px">
+  <div class="card" style="flex:1;padding:26px 26px;text-align:center"><div class="ttl">Manuel</div><div class="txt" style="margin-top:8px">Si vous brassez 1 à 2 fois par semaine.</div></div>
+  <div class="card" style="flex:1;padding:26px 26px;text-align:center;background:var(--yellow)"><div class="ttl">Automatique</div><div class="txt" style="margin-top:8px">Dès que vous brassez plus souvent et que le temps compte.</div></div>
+</div>
+<p style="position:absolute;top:890px;left:120px;width:840px;text-align:center;font-size:31px">Station CIP 100 L ou version automatique&nbsp;: on vous aide à choisir lors de <b>l'étude de votre projet</b>.</p>
+<div style="position:absolute;top:1030px;left:0;right:0;text-align:center"><span class="pill">Article complet sur brewfactory.fr</span></div>
+</div><svg class="wave" viewBox="0 0 1080 300" preserveAspectRatio="none"><path d="M0 170 C260 90 460 230 700 150 C860 95 980 120 1080 90 V300 H0z" fill="var(--orange)"/><path d="M0 235 C300 170 520 290 780 220 C920 185 1010 200 1080 190 V300 H0z" fill="var(--peach)"/></svg><div class="handle">brewfactory.fr</div></section></body></html>

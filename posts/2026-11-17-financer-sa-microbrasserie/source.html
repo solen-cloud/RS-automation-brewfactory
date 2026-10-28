@@ -1,0 +1,118 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><style>
+@font-face{font-family:"Bodoni";src:url("file:///home/claude/rs-automation-brewfactory/fonts/BodoniFLF-Bold.ttf");font-weight:700}
+@font-face{font-family:"Bodoni";src:url("file:///home/claude/rs-automation-brewfactory/fonts/BodoniFLF-Roman.ttf");font-weight:400}
+@font-face{font-family:"Bodoni";src:url("file:///home/claude/rs-automation-brewfactory/fonts/BodoniFLF-Italic.ttf");font-weight:400;font-style:italic}
+@font-face{font-family:"Hanken";src:url("file:///home/claude/rs-automation-brewfactory/fonts/HankenGrotesk-Regular.ttf");font-weight:400}
+@font-face{font-family:"Hanken";src:url("file:///home/claude/rs-automation-brewfactory/fonts/HankenGrotesk-Medium.ttf");font-weight:500}
+@font-face{font-family:"Hanken";src:url("file:///home/claude/rs-automation-brewfactory/fonts/HankenGrotesk-SemiBold.ttf");font-weight:600}
+@font-face{font-family:"Hanken";src:url("file:///home/claude/rs-automation-brewfactory/fonts/HankenGrotesk-Bold.ttf");font-weight:700}
+@font-face{font-family:"Hanken";src:url("file:///home/claude/rs-automation-brewfactory/fonts/HankenGrotesk-ExtraBold.ttf");font-weight:800}
+:root{
+  --bg:#FDEDE6; --yellow:#F5AA16; --orange:#FFB35C; --peach:#FFCF92;
+  --brown:#2E1A0E; --soft:#FCDDB4; --cream:#FFF8F2;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#ccc;font-family:"Hanken";color:var(--brown)}
+.slide{width:1080px;height:1350px;background:var(--bg);position:relative;overflow:hidden;margin:20px auto}
+.badge{position:absolute;top:64px;left:72px;background:var(--yellow);color:var(--brown);font:800 46px/1 "Hanken";padding:16px 26px;border-radius:10px;z-index:3}
+.dots{position:absolute;display:grid;grid-template-columns:repeat(3,14px);gap:26px;z-index:2}
+.dots i{width:14px;height:14px;border-radius:50%;background:var(--yellow);display:block}
+.wave{position:absolute;left:0;bottom:0;width:1080px;height:300px;z-index:1}
+.content{position:absolute;inset:0;z-index:2;padding:0 90px}
+h1,h2{font-family:"Bodoni";font-weight:700;letter-spacing:-0.5px;line-height:1.02}
+.acc{color:var(--yellow)}
+.kicker{font:700 30px/1.2 "Hanken";letter-spacing:4px;text-transform:uppercase}
+.rule{width:150px;height:10px;border-radius:6px;background:var(--yellow)}
+p{font:400 34px/1.4 "Hanken"}
+b{font-weight:700}
+.handle{position:absolute;bottom:58px;right:80px;z-index:3;font:600 26px/1 "Hanken";letter-spacing:1px;color:var(--brown)}
+.swipe{position:absolute;bottom:58px;left:90px;z-index:3;font:700 28px/1 "Hanken";display:flex;align-items:center;gap:14px}
+svg .s{fill:none;stroke:var(--brown);stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+
+.card{background:var(--cream);border:3px solid var(--brown);border-radius:16px}
+.ttl{font:800 32px/1.15 'Hanken'}
+.txt{font:400 27px/1.35 'Hanken'}
+.pill{display:inline-block;background:var(--yellow);font:800 26px/1 'Hanken';padding:12px 20px;border-radius:999px}
+.num{width:64px;height:64px;border-radius:50%;background:var(--yellow);border:3px solid var(--brown);display:flex;align-items:center;justify-content:center;font:800 30px/1 'Hanken';flex:none}
+.logo{position:absolute;z-index:4}
+</style></head><body><section class="slide" id="s1"><div class="badge">1/6</div><div class="dots" style="top:70px;right:80px"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="content">
+<div class="kicker" style="position:absolute;top:230px;left:90px">Financement</div>
+<h1 style="position:absolute;top:290px;left:90px;font-size:116px;width:920px">Financer sa<br><span class="acc">microbrasserie.</span></h1>
+<div class="rule" style="position:absolute;top:560px;left:90px"></div>
+<p style="position:absolute;top:605px;left:90px;width:460px">Leasing, prêt, garanties, aides… <b>les bonnes pistes</b> pour financer votre équipement.</p>
+<svg style="position:absolute;top:560px;left:540px" width="500" height="540" viewBox="0 0 500 540">
+  <circle cx="260" cy="250" r="210" fill="var(--soft)"/>
+  <!-- cuve -->
+  <path class="s" d="M70 120 q0 -36 60 -36 q60 0 60 36 v170 l-60 46 l-60 -46 z" fill="var(--cream)"/>
+  <path d="M74 220 h112 v68 l-56 43 l-56 -43 z" fill="var(--orange)"/>
+  <path class="s" d="M70 120 q0 -36 60 -36 q60 0 60 36 v170 l-60 46 l-60 -46 z"/>
+  <path class="s" d="M82 300 l-8 80 M178 300 l8 80"/>
+  <!-- dossier -->
+  <rect class="s" x="230" y="150" width="170" height="210" rx="10" fill="var(--cream)"/>
+  <rect class="s" x="285" y="136" width="60" height="26" rx="6" fill="var(--yellow)"/>
+  <path class="s" d="M255 200 h120 M255 230 h120 M255 260 h80"/>
+  <path class="s" d="M255 300 l12 12 l22 -24"/>
+  <!-- pièces -->
+  <g><ellipse class="s" cx="380" cy="440" rx="62" ry="18" fill="var(--yellow)"/><path class="s" d="M318 440 v-26 M442 440 v-26"/><ellipse class="s" cx="380" cy="414" rx="62" ry="18" fill="var(--yellow)"/>
+  <path class="s" d="M318 414 v-26 M442 414 v-26"/><ellipse class="s" cx="380" cy="388" rx="62" ry="18" fill="var(--orange)"/>
+  <text x="380" y="398" text-anchor="middle" font-family="Hanken" font-weight="800" font-size="28" fill="var(--brown)">€</text></g>
+  <path class="s" d="M20 440 h270" />
+</svg></div><svg class="wave" viewBox="0 0 1080 300" preserveAspectRatio="none"><path d="M0 170 C260 90 460 230 700 150 C860 95 980 120 1080 90 V300 H0z" fill="var(--orange)"/><path d="M0 235 C300 170 520 290 780 220 C920 185 1010 200 1080 190 V300 H0z" fill="var(--peach)"/></svg><div class="swipe">Faites défiler <svg width="44" height="24" viewBox="0 0 44 24"><path class="s" d="M2 12 h38 M30 3 l10 9 l-10 9"/></svg></div></section><section class="slide" id="s2"><div class="badge">2/6</div><div class="dots" style="top:70px;right:80px"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="content">
+<div class="kicker" style="position:absolute;top:200px;left:0;right:0;text-align:center">La clé</div>
+<h2 style="position:absolute;top:255px;left:0;right:0;text-align:center;font-size:92px">Combiner<br><span class="acc">les dispositifs.</span></h2>
+<div style="position:absolute;top:500px;left:90px;width:900px"><div class="card" style="background:var(--cream);padding:22px 30px;font:800 32px/1 'Hanken';text-align:center;margin-bottom:14px;width:620px;margin-left:auto;margin-right:auto">Apport personnel</div><div class="card" style="background:var(--yellow);padding:22px 30px;font:800 32px/1 'Hanken';text-align:center;margin-bottom:14px;width:660px;margin-left:auto;margin-right:auto">Leasing</div><div class="card" style="background:var(--orange);padding:22px 30px;font:800 32px/1 'Hanken';text-align:center;margin-bottom:14px;width:700px;margin-left:auto;margin-right:auto">Prêt bancaire</div><div class="card" style="background:var(--peach);padding:22px 30px;font:800 32px/1 'Hanken';text-align:center;margin-bottom:14px;width:740px;margin-left:auto;margin-right:auto">Garanties Bpifrance</div><div class="card" style="background:var(--yellow);padding:22px 30px;font:800 32px/1 'Hanken';text-align:center;margin-bottom:14px;width:780px;margin-left:auto;margin-right:auto">Subventions & aides</div></div>
+<p style="position:absolute;top:1010px;left:90px;width:900px;text-align:center;font-size:30px">Ensemble, ils forment un <b>plan de financement cohérent</b>. Les subventions se cumulent généralement avec un leasing ou un prêt.</p>
+</div><svg class="wave" viewBox="0 0 1080 300" preserveAspectRatio="none"><path d="M0 245 C260 200 460 290 700 238 C860 205 980 212 1080 195 V300 H0z" fill="var(--orange)"/><path d="M0 280 C300 250 520 300 780 278 C920 265 1010 270 1080 265 V300 H0z" fill="var(--peach)"/></svg></section><section class="slide" id="s3"><div class="badge">3/6</div><div class="dots" style="top:70px;right:80px"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="content">
+<div class="kicker" style="position:absolute;top:200px;left:90px">Piste n°1</div>
+<h2 style="position:absolute;top:255px;left:90px;font-size:100px">Le <span class="acc">leasing.</span></h2>
+<p style="position:absolute;top:400px;left:90px;width:900px">Le bailleur achète votre équipement et vous le met à disposition contre un <b>loyer mensuel</b>. En fin de contrat, vous pouvez lever une option d'achat.</p>
+<div class="card" style="position:absolute;top:620px;left:90px;width:900px;padding:36px 40px">
+  <div class="ttl" style="margin-bottom:18px">Les avantages</div>
+  <div style="display:flex;gap:18px;align-items:flex-start;margin-bottom:22px"><svg width="40" height="40" viewBox="0 0 40 40" style="flex:none"><circle cx="20" cy="20" r="18" fill="var(--yellow)"/><path class="s" d="M12 20 l6 6 l10 -12" style="stroke-width:4"/></svg><div class="txt" style="font-size:31px">Il préserve votre <b>trésorerie</b> et votre capacité d'emprunt.</div></div>
+  <div style="display:flex;gap:18px;align-items:flex-start;margin-bottom:22px"><svg width="40" height="40" viewBox="0 0 40 40" style="flex:none"><circle cx="20" cy="20" r="18" fill="var(--yellow)"/><path class="s" d="M12 20 l6 6 l10 -12" style="stroke-width:4"/></svg><div class="txt" style="font-size:31px">Pas besoin d'un apport initial important.</div></div>
+  <div style="display:flex;gap:18px;align-items:flex-start;margin-bottom:22px"><svg width="40" height="40" viewBox="0 0 40 40" style="flex:none"><circle cx="20" cy="20" r="18" fill="var(--yellow)"/><path class="s" d="M12 20 l6 6 l10 -12" style="stroke-width:4"/></svg><div class="txt" style="font-size:31px">Les loyers sont déductibles en charges d'exploitation.</div></div>
+</div>
+<div style="position:absolute;top:1010px;left:90px;width:900px;padding:0 40px">
+  <div style="display:flex;gap:18px;align-items:flex-start;margin-bottom:22px"><svg width="40" height="40" viewBox="0 0 40 40" style="flex:none"><path class="s" d="M20 4 l17 31 h-34z" fill="var(--cream)" style="stroke-width:3"/><path class="s" d="M20 15 v9" style="stroke-width:3"/><circle cx="20" cy="29" r="2.5" fill="var(--brown)"/></svg><div class="txt" style="font-size:29px"><b>À surveiller :</b> le coût total est supérieur à un achat comptant. Calez la durée du contrat sur la vie réelle du matériel.</div></div>
+</div>
+</div><svg class="wave" viewBox="0 0 1080 300" preserveAspectRatio="none"><path d="M0 245 C260 200 460 290 700 238 C860 205 980 212 1080 195 V300 H0z" fill="var(--orange)"/><path d="M0 280 C300 250 520 300 780 278 C920 265 1010 270 1080 265 V300 H0z" fill="var(--peach)"/></svg></section><section class="slide" id="s4"><div class="badge">4/6</div><div class="dots" style="top:70px;right:80px"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="content">
+<div class="kicker" style="position:absolute;top:200px;left:90px">Piste n°2</div>
+<h2 style="position:absolute;top:255px;left:90px;font-size:88px;width:920px">Le prêt bancaire,<br><span class="acc">bien accompagné.</span></h2>
+<div class="card" style="position:absolute;top:500px;left:90px;width:900px;padding:28px 34px;display:flex;gap:26px;align-items:center">
+<svg width="76" height="76" viewBox="0 0 76 76" style="flex:none"><circle cx="38" cy="38" r="36" fill="var(--yellow)"/><path class="s" d="M18 32 l20 -12 l20 12 M22 34 v20 M32 34 v20 M44 34 v20 M54 34 v20 M16 58 h44"/></svg>
+<div><div class="ttl">Garantie Bpifrance</div><div class="txt" style="margin-top:6px">Elle couvre une partie du prêt et rassure votre banque : un crédit refusé peut ainsi être débloqué.</div></div></div>
+<div class="card" style="position:absolute;top:705px;left:90px;width:900px;padding:28px 34px;display:flex;gap:26px;align-items:center">
+<svg width="76" height="76" viewBox="0 0 76 76" style="flex:none"><circle cx="38" cy="38" r="36" fill="var(--yellow)"/><path class="s" d="M18 32 l20 -12 l20 12 M22 34 v20 M32 34 v20 M44 34 v20 M54 34 v20 M16 58 h44"/></svg>
+<div><div class="ttl">Prêt Croissance TPE</div><div class="txt" style="margin-top:6px">Sans garantie personnelle, pour les entreprises de moins de 3 ans, cofinancé avec votre banque.</div></div></div>
+<div class="card" style="position:absolute;top:910px;left:90px;width:900px;padding:28px 34px;display:flex;gap:26px;align-items:center">
+<svg width="76" height="76" viewBox="0 0 76 76" style="flex:none"><circle cx="38" cy="38" r="36" fill="var(--yellow)"/><path class="s" d="M18 32 l20 -12 l20 12 M22 34 v20 M32 34 v20 M44 34 v20 M54 34 v20 M16 58 h44"/></svg>
+<div><div class="ttl">Prêt d'honneur</div><div class="txt" style="margin-top:6px">Initiative France, ADIE… pour renforcer votre apport et compléter le montage.</div></div></div>
+</div><svg class="wave" viewBox="0 0 1080 300" preserveAspectRatio="none"><path d="M0 245 C260 200 460 290 700 238 C860 205 980 212 1080 195 V300 H0z" fill="var(--orange)"/><path d="M0 280 C300 250 520 300 780 278 C920 265 1010 270 1080 265 V300 H0z" fill="var(--peach)"/></svg></section><section class="slide" id="s5"><div class="badge">5/6</div><div class="dots" style="top:70px;right:80px"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="content">
+<div class="kicker" style="position:absolute;top:200px;left:90px">Piste n°3</div>
+<h2 style="position:absolute;top:255px;left:90px;font-size:88px;width:920px">Les aides et<br><span class="acc">subventions.</span></h2>
+<div style="position:absolute;top:500px;left:90px;width:900px">
+  <div style="display:flex;gap:18px;align-items:flex-start;margin-bottom:22px"><svg width="40" height="40" viewBox="0 0 40 40" style="flex:none"><circle cx="20" cy="20" r="18" fill="var(--yellow)"/><path class="s" d="M12 20 l6 6 l10 -12" style="stroke-width:4"/></svg><div class="txt" style="font-size:31px"><b>Subventions régionales</b> : souvent liées à la création d'emplois, à l'ancrage local ou aux circuits courts.</div></div>
+  <div style="display:flex;gap:18px;align-items:flex-start;margin-bottom:22px"><svg width="40" height="40" viewBox="0 0 40 40" style="flex:none"><circle cx="20" cy="20" r="18" fill="var(--yellow)"/><path class="s" d="M12 20 l6 6 l10 -12" style="stroke-width:4"/></svg><div class="txt" style="font-size:31px"><b>Programme LEADER</b> : pour les brasseries en zone rurale, via un Groupe d'Action Locale.</div></div>
+  <div style="display:flex;gap:18px;align-items:flex-start;margin-bottom:22px"><svg width="40" height="40" viewBox="0 0 40 40" style="flex:none"><circle cx="20" cy="20" r="18" fill="var(--yellow)"/><path class="s" d="M12 20 l6 6 l10 -12" style="stroke-width:4"/></svg><div class="txt" style="font-size:31px"><b>ACRE</b> et aides à l'embauche : elles allègent les charges de la jeune structure.</div></div>
+</div>
+<div style="position:absolute;top:960px;left:90px;width:900px;display:flex;border:3px solid var(--brown);border-radius:12px;overflow:hidden;background:var(--cream)">
+  <div style="background:var(--yellow);width:120px;display:flex;align-items:center;justify-content:center;border-right:3px solid var(--brown)">
+    <svg width="66" height="60" viewBox="0 0 66 60"><path class="s" d="M33 6 l28 48 h-56 z" fill="var(--yellow)"/><line class="s" x1="33" y1="24" x2="33" y2="38"/><circle cx="33" cy="46" r="3" fill="var(--brown)"/></svg>
+  </div>
+  <p style="padding:26px 30px;font-size:29px">Déposez vos demandes <b>avant toute commande ou acompte</b> : une aide ne finance pas un investissement déjà engagé.</p>
+</div>
+</div><svg class="wave" viewBox="0 0 1080 300" preserveAspectRatio="none"><path d="M0 245 C260 200 460 290 700 238 C860 205 980 212 1080 195 V300 H0z" fill="var(--orange)"/><path d="M0 280 C300 250 520 300 780 278 C920 265 1010 270 1080 265 V300 H0z" fill="var(--peach)"/></svg></section><section class="slide" id="s6"><div class="badge">6/6</div><div class="dots" style="top:70px;right:80px"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="content">
+<svg style="position:absolute;top:110px;left:400px" width="280" height="230" viewBox="0 0 280 230">
+  <circle cx="140" cy="120" r="105" fill="var(--soft)"/>
+  <path class="s" d="M20 110 l50 -30 l40 10 l30 -16 l40 16 l50 30" />
+  <path class="s" d="M70 80 l-30 60 l40 36 h34 l50 -30" fill="var(--yellow)"/>
+  <path class="s" d="M140 74 l-38 30 q-8 10 4 16 q10 4 20 -4 l20 -14 l50 40 l14 -16" fill="var(--orange)"/>
+  <path class="s" d="M100 150 l14 14 M116 140 l16 16 M132 130 l16 14"/>
+</svg>
+<h2 style="position:absolute;top:360px;left:0;right:0;text-align:center;font-size:84px">Un dossier solide,<br><span class="acc">ça se prépare.</span></h2>
+<div style="position:absolute;top:570px;left:270px;width:640px">
+  <div style="display:flex;gap:18px;align-items:flex-start;margin-bottom:22px"><svg width="40" height="40" viewBox="0 0 40 40" style="flex:none"><circle cx="20" cy="20" r="18" fill="var(--yellow)"/><path class="s" d="M12 20 l6 6 l10 -12" style="stroke-width:4"/></svg><div class="txt" style="font-size:30px">Un business plan sur 3 ans</div></div><div style="display:flex;gap:18px;align-items:flex-start;margin-bottom:22px"><svg width="40" height="40" viewBox="0 0 40 40" style="flex:none"><circle cx="20" cy="20" r="18" fill="var(--yellow)"/><path class="s" d="M12 20 l6 6 l10 -12" style="stroke-width:4"/></svg><div class="txt" style="font-size:30px">Des devis détaillés</div></div><div style="display:flex;gap:18px;align-items:flex-start;margin-bottom:22px"><svg width="40" height="40" viewBox="0 0 40 40" style="flex:none"><circle cx="20" cy="20" r="18" fill="var(--yellow)"/><path class="s" d="M12 20 l6 6 l10 -12" style="stroke-width:4"/></svg><div class="txt" style="font-size:30px">Une présentation du projet</div></div><div style="display:flex;gap:18px;align-items:flex-start;margin-bottom:22px"><svg width="40" height="40" viewBox="0 0 40 40" style="flex:none"><circle cx="20" cy="20" r="18" fill="var(--yellow)"/><path class="s" d="M12 20 l6 6 l10 -12" style="stroke-width:4"/></svg><div class="txt" style="font-size:30px">Vos statuts et votre Kbis</div></div><div style="display:flex;gap:18px;align-items:flex-start;margin-bottom:22px"><svg width="40" height="40" viewBox="0 0 40 40" style="flex:none"><circle cx="20" cy="20" r="18" fill="var(--yellow)"/><path class="s" d="M12 20 l6 6 l10 -12" style="stroke-width:4"/></svg><div class="txt" style="font-size:30px">Un apport personnel</div></div>
+</div>
+<p style="position:absolute;top:950px;left:120px;width:840px;text-align:center;font-size:30px">Nous vous aidons à <b>chercher le bon financement</b> pour votre équipement. Parlons de votre projet&nbsp;!</p>
+<div style="position:absolute;top:1075px;left:0;right:0;text-align:center"><span class="pill">Guide complet sur brewfactory.fr</span></div>
+</div><svg class="wave" viewBox="0 0 1080 300" preserveAspectRatio="none"><path d="M0 170 C260 90 460 230 700 150 C860 95 980 120 1080 90 V300 H0z" fill="var(--orange)"/><path d="M0 235 C300 170 520 290 780 220 C920 185 1010 200 1080 190 V300 H0z" fill="var(--peach)"/></svg><div class="handle">brewfactory.fr</div></section></body></html>
