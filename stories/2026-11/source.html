@@ -1,0 +1,86 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><style>
+@font-face{font-family:"Bodoni";src:url("file:///home/claude/rs-automation-brewfactory/fonts/BodoniFLF-Bold.ttf");font-weight:700}
+@font-face{font-family:"Bodoni";src:url("file:///home/claude/rs-automation-brewfactory/fonts/BodoniFLF-Roman.ttf");font-weight:400}
+@font-face{font-family:"Bodoni";src:url("file:///home/claude/rs-automation-brewfactory/fonts/BodoniFLF-Italic.ttf");font-weight:400;font-style:italic}
+@font-face{font-family:"Hanken";src:url("file:///home/claude/rs-automation-brewfactory/fonts/HankenGrotesk-Regular.ttf");font-weight:400}
+@font-face{font-family:"Hanken";src:url("file:///home/claude/rs-automation-brewfactory/fonts/HankenGrotesk-Medium.ttf");font-weight:500}
+@font-face{font-family:"Hanken";src:url("file:///home/claude/rs-automation-brewfactory/fonts/HankenGrotesk-SemiBold.ttf");font-weight:600}
+@font-face{font-family:"Hanken";src:url("file:///home/claude/rs-automation-brewfactory/fonts/HankenGrotesk-Bold.ttf");font-weight:700}
+@font-face{font-family:"Hanken";src:url("file:///home/claude/rs-automation-brewfactory/fonts/HankenGrotesk-ExtraBold.ttf");font-weight:800}
+:root{
+  --bg:#FDEDE6; --yellow:#F5AA16; --orange:#FFB35C; --peach:#FFCF92;
+  --brown:#2E1A0E; --soft:#FCDDB4; --cream:#FFF8F2;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#ccc;font-family:"Hanken";color:var(--brown)}
+.slide{width:1080px;height:1350px;background:var(--bg);position:relative;overflow:hidden;margin:20px auto}
+.badge{position:absolute;top:64px;left:72px;background:var(--yellow);color:var(--brown);font:800 46px/1 "Hanken";padding:16px 26px;border-radius:10px;z-index:3}
+.dots{position:absolute;display:grid;grid-template-columns:repeat(3,14px);gap:26px;z-index:2}
+.dots i{width:14px;height:14px;border-radius:50%;background:var(--yellow);display:block}
+.wave{position:absolute;left:0;bottom:0;width:1080px;height:300px;z-index:1}
+.content{position:absolute;inset:0;z-index:2;padding:0 90px}
+h1,h2{font-family:"Bodoni";font-weight:700;letter-spacing:-0.5px;line-height:1.02}
+.acc{color:var(--yellow)}
+.kicker{font:700 30px/1.2 "Hanken";letter-spacing:4px;text-transform:uppercase}
+.rule{width:150px;height:10px;border-radius:6px;background:var(--yellow)}
+p{font:400 34px/1.4 "Hanken"}
+b{font-weight:700}
+.handle{position:absolute;bottom:58px;right:80px;z-index:3;font:600 26px/1 "Hanken";letter-spacing:1px;color:var(--brown)}
+.swipe{position:absolute;bottom:58px;left:90px;z-index:3;font:700 28px/1 "Hanken";display:flex;align-items:center;gap:14px}
+svg .s{fill:none;stroke:var(--brown);stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+
+.card{background:var(--cream);border:3px solid var(--brown);border-radius:16px}
+.ttl{font:800 32px/1.15 'Hanken'}
+.txt{font:400 27px/1.35 'Hanken'}
+.pill{display:inline-block;background:var(--yellow);font:800 26px/1 'Hanken';padding:12px 20px;border-radius:999px}
+.num{position:relative;z-index:2;width:64px;height:64px;border-radius:50%;background:var(--yellow);border:3px solid var(--brown);display:flex;align-items:center;justify-content:center;font:800 30px/1 'Hanken';flex:none}
+.logo{position:absolute;z-index:4}
+
+.story{width:1080px;height:1920px;background:var(--bg);position:relative;overflow:hidden;margin:20px auto}
+.story .wave{height:360px}
+.slot{border:4px dashed #E9B97A;border-radius:28px;background:rgba(255,248,242,.6)}
+</style></head><body><section class="story slide" id="s1"><div class="dots" style="top:270px;right:80px"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><img src="file:///home/claude/rs-automation-brewfactory/assets/logo-brewfactory.png" style="position:absolute;top:150px;left:50%;transform:translateX(-50%);width:330px;z-index:4"><div class="content">
+<div class="kicker" style="position:absolute;top:390px;left:0;right:0;text-align:center">Brasserie ou brewpub ?</div>
+<h1 style="position:absolute;top:450px;left:0;right:0;text-align:center;font-size:96px">Quel modèle<br><span class="acc">pour votre projet&nbsp;?</span></h1>
+<img src="file:///home/claude/rs-automation-brewfactory/posts/2026-11-03-brasserie-ou-brewpub/slide-1.png" style="position:absolute;top:720px;left:240px;width:600px;border-radius:22px;border:4px solid var(--brown);transform:rotate(-4deg);box-shadow:0 24px 50px rgba(46,26,14,.18)">
+<div style="position:absolute;top:1530px;left:0;right:0;text-align:center;z-index:3"><span class="pill" style="font-size:34px;padding:18px 34px">Nouveau carrousel à 12h30 👀</span></div>
+</div><svg class="wave" viewBox="0 0 1080 300" preserveAspectRatio="none"><path d="M0 170 C260 90 460 230 700 150 C860 95 980 120 1080 90 V300 H0z" fill="var(--orange)"/><path d="M0 235 C300 170 520 290 780 220 C920 185 1010 200 1080 190 V300 H0z" fill="var(--peach)"/></svg></section><section class="story slide" id="s2"><div class="dots" style="top:270px;right:80px"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><img src="file:///home/claude/rs-automation-brewfactory/assets/logo-brewfactory.png" style="position:absolute;top:150px;left:50%;transform:translateX(-50%);width:330px;z-index:4"><div class="content">
+<div class="kicker" style="position:absolute;top:420px;left:0;right:0;text-align:center">Sondage</div>
+<h1 style="position:absolute;top:480px;left:70px;right:70px;text-align:center;font-size:100px">Votre projet,<br><span class="acc">c'est plutôt…</span></h1>
+<p style="position:absolute;top:820px;left:120px;right:120px;text-align:center;font-size:38px">Brasserie de production ou brewpub&nbsp;? Votez&nbsp;!</p>
+<div class="slot" style="position:absolute;top:1010px;left:170px;width:740px;height:300px"></div>
+<div style="position:absolute;top:1440px;left:120px;right:120px;text-align:center;font:600 32px/1.3 'Hanken'">Besoin d'aide pour choisir&nbsp;? Revoyez notre carrousel de mardi.</div>
+</div><svg class="wave" viewBox="0 0 1080 300" preserveAspectRatio="none"><path d="M0 170 C260 90 460 230 700 150 C860 95 980 120 1080 90 V300 H0z" fill="var(--orange)"/><path d="M0 235 C300 170 520 290 780 220 C920 185 1010 200 1080 190 V300 H0z" fill="var(--peach)"/></svg></section><section class="story slide" id="s3"><div class="dots" style="top:270px;right:80px"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><img src="file:///home/claude/rs-automation-brewfactory/assets/logo-brewfactory.png" style="position:absolute;top:150px;left:50%;transform:translateX(-50%);width:330px;z-index:4"><div class="content">
+<div class="kicker" style="position:absolute;top:390px;left:0;right:0;text-align:center">Salle de brassage</div>
+<h1 style="position:absolute;top:450px;left:0;right:0;text-align:center;font-size:96px">2, 3 ou 4 cuves&nbsp;?<br><span class="acc">On vous explique.</span></h1>
+<img src="file:///home/claude/rs-automation-brewfactory/posts/2026-11-10-2-3-ou-4-cuves/slide-1.png" style="position:absolute;top:720px;left:240px;width:600px;border-radius:22px;border:4px solid var(--brown);transform:rotate(-4deg);box-shadow:0 24px 50px rgba(46,26,14,.18)">
+<div style="position:absolute;top:1530px;left:0;right:0;text-align:center;z-index:3"><span class="pill" style="font-size:34px;padding:18px 34px">Nouveau carrousel à 12h30 👀</span></div>
+</div><svg class="wave" viewBox="0 0 1080 300" preserveAspectRatio="none"><path d="M0 170 C260 90 460 230 700 150 C860 95 980 120 1080 90 V300 H0z" fill="var(--orange)"/><path d="M0 235 C300 170 520 290 780 220 C920 185 1010 200 1080 190 V300 H0z" fill="var(--peach)"/></svg></section><section class="story slide" id="s4"><div class="dots" style="top:270px;right:80px"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><img src="file:///home/claude/rs-automation-brewfactory/assets/logo-brewfactory.png" style="position:absolute;top:150px;left:50%;transform:translateX(-50%);width:330px;z-index:4"><div class="content">
+<div class="kicker" style="position:absolute;top:420px;left:0;right:0;text-align:center">Vos questions</div>
+<h1 style="position:absolute;top:480px;left:70px;right:70px;text-align:center;font-size:100px">Une question sur<br><span class="acc">votre projet&nbsp;?</span></h1>
+<p style="position:absolute;top:820px;left:120px;right:120px;text-align:center;font-size:38px">Matériel, local, dimensionnement… posez-la ici, on vous répond en story&nbsp;!</p>
+<div class="slot" style="position:absolute;top:1010px;left:170px;width:740px;height:340px"></div>
+<div style="position:absolute;top:1440px;left:120px;right:120px;text-align:center;font:600 32px/1.3 'Hanken'">Toutes les questions sont les bienvenues 🍺</div>
+</div><svg class="wave" viewBox="0 0 1080 300" preserveAspectRatio="none"><path d="M0 170 C260 90 460 230 700 150 C860 95 980 120 1080 90 V300 H0z" fill="var(--orange)"/><path d="M0 235 C300 170 520 290 780 220 C920 185 1010 200 1080 190 V300 H0z" fill="var(--peach)"/></svg></section><section class="story slide" id="s5"><div class="dots" style="top:270px;right:80px"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><img src="file:///home/claude/rs-automation-brewfactory/assets/logo-brewfactory.png" style="position:absolute;top:150px;left:50%;transform:translateX(-50%);width:330px;z-index:4"><div class="content">
+<div class="kicker" style="position:absolute;top:390px;left:0;right:0;text-align:center">Financement</div>
+<h1 style="position:absolute;top:450px;left:0;right:0;text-align:center;font-size:96px">Financer sa<br><span class="acc">microbrasserie.</span></h1>
+<img src="file:///home/claude/rs-automation-brewfactory/posts/2026-11-17-financer-sa-microbrasserie/slide-1.png" style="position:absolute;top:720px;left:240px;width:600px;border-radius:22px;border:4px solid var(--brown);transform:rotate(-4deg);box-shadow:0 24px 50px rgba(46,26,14,.18)">
+<div style="position:absolute;top:1530px;left:0;right:0;text-align:center;z-index:3"><span class="pill" style="font-size:34px;padding:18px 34px">Nouveau carrousel à 12h30 👀</span></div>
+</div><svg class="wave" viewBox="0 0 1080 300" preserveAspectRatio="none"><path d="M0 170 C260 90 460 230 700 150 C860 95 980 120 1080 90 V300 H0z" fill="var(--orange)"/><path d="M0 235 C300 170 520 290 780 220 C920 185 1010 200 1080 190 V300 H0z" fill="var(--peach)"/></svg></section><section class="story slide" id="s6"><div class="dots" style="top:270px;right:80px"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><img src="file:///home/claude/rs-automation-brewfactory/assets/logo-brewfactory.png" style="position:absolute;top:150px;left:50%;transform:translateX(-50%);width:330px;z-index:4"><div class="content">
+<div class="kicker" style="position:absolute;top:420px;left:0;right:0;text-align:center">Quiz</div>
+<h1 style="position:absolute;top:480px;left:70px;right:70px;text-align:center;font-size:86px">Avec 3 cuves,<br><span class="acc">combien de brassins&nbsp;?</span></h1>
+<p style="position:absolute;top:820px;left:120px;right:120px;text-align:center;font-size:38px">Par jour, en moyenne. Testez-vous&nbsp;!</p>
+<div class="slot" style="position:absolute;top:1010px;left:170px;width:740px;height:380px"></div>
+<div style="position:absolute;top:1440px;left:120px;right:120px;text-align:center;font:600 32px/1.3 'Hanken'">Indice : la réponse est dans notre carrousel du 10 novembre.</div>
+</div><svg class="wave" viewBox="0 0 1080 300" preserveAspectRatio="none"><path d="M0 170 C260 90 460 230 700 150 C860 95 980 120 1080 90 V300 H0z" fill="var(--orange)"/><path d="M0 235 C300 170 520 290 780 220 C920 185 1010 200 1080 190 V300 H0z" fill="var(--peach)"/></svg></section><section class="story slide" id="s7"><div class="dots" style="top:270px;right:80px"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><img src="file:///home/claude/rs-automation-brewfactory/assets/logo-brewfactory.png" style="position:absolute;top:150px;left:50%;transform:translateX(-50%);width:330px;z-index:4"><div class="content">
+<div class="kicker" style="position:absolute;top:390px;left:0;right:0;text-align:center">Hygiène</div>
+<h1 style="position:absolute;top:450px;left:0;right:0;text-align:center;font-size:96px">Le CIP, le poste<br><span class="acc">qu'on sous-estime.</span></h1>
+<img src="file:///home/claude/rs-automation-brewfactory/posts/2026-11-24-cip-nettoyage/slide-1.png" style="position:absolute;top:720px;left:240px;width:600px;border-radius:22px;border:4px solid var(--brown);transform:rotate(-4deg);box-shadow:0 24px 50px rgba(46,26,14,.18)">
+<div style="position:absolute;top:1530px;left:0;right:0;text-align:center;z-index:3"><span class="pill" style="font-size:34px;padding:18px 34px">Nouveau carrousel à 12h30 👀</span></div>
+</div><svg class="wave" viewBox="0 0 1080 300" preserveAspectRatio="none"><path d="M0 170 C260 90 460 230 700 150 C860 95 980 120 1080 90 V300 H0z" fill="var(--orange)"/><path d="M0 235 C300 170 520 290 780 220 C920 185 1010 200 1080 190 V300 H0z" fill="var(--peach)"/></svg></section><section class="story slide" id="s8"><div class="dots" style="top:270px;right:80px"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><img src="file:///home/claude/rs-automation-brewfactory/assets/logo-brewfactory.png" style="position:absolute;top:150px;left:50%;transform:translateX(-50%);width:330px;z-index:4"><div class="content">
+<div class="kicker" style="position:absolute;top:420px;left:0;right:0;text-align:center">Sondage</div>
+<h1 style="position:absolute;top:480px;left:70px;right:70px;text-align:center;font-size:100px">Boire sa bière<br><span class="acc">à côté des cuves&nbsp;?</span></h1>
+<p style="position:absolute;top:820px;left:120px;right:120px;text-align:center;font-size:38px">Vous avez déjà testé un brewpub&nbsp;?</p>
+<div class="slot" style="position:absolute;top:1010px;left:170px;width:740px;height:300px"></div>
+<div style="position:absolute;top:1440px;left:120px;right:120px;text-align:center;font:600 32px/1.3 'Hanken'">Rendez-vous à 12h30 pour découvrir notre dernière réalisation.</div>
+</div><svg class="wave" viewBox="0 0 1080 300" preserveAspectRatio="none"><path d="M0 170 C260 90 460 230 700 150 C860 95 980 120 1080 90 V300 H0z" fill="var(--orange)"/><path d="M0 235 C300 170 520 290 780 220 C920 185 1010 200 1080 190 V300 H0z" fill="var(--peach)"/></svg></section></body></html>
