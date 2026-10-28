@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<style>
+@font-face{font-family:"Bodoni";src:url("file:///home/claude/rs-automation-brewfactory/fonts/BodoniFLF-Bold.ttf");font-weight:700}
+@font-face{font-family:"Bodoni";src:url("file:///home/claude/rs-automation-brewfactory/fonts/BodoniFLF-Roman.ttf");font-weight:400}
+@font-face{font-family:"Bodoni";src:url("file:///home/claude/rs-automation-brewfactory/fonts/BodoniFLF-Italic.ttf");font-weight:400;font-style:italic}
+@font-face{font-family:"Hanken";src:url("file:///home/claude/rs-automation-brewfactory/fonts/HankenGrotesk-Regular.ttf");font-weight:400}
+@font-face{font-family:"Hanken";src:url("file:///home/claude/rs-automation-brewfactory/fonts/HankenGrotesk-Medium.ttf");font-weight:500}
+@font-face{font-family:"Hanken";src:url("file:///home/claude/rs-automation-brewfactory/fonts/HankenGrotesk-SemiBold.ttf");font-weight:600}
+@font-face{font-family:"Hanken";src:url("file:///home/claude/rs-automation-brewfactory/fonts/HankenGrotesk-Bold.ttf");font-weight:700}
+@font-face{font-family:"Hanken";src:url("file:///home/claude/rs-automation-brewfactory/fonts/HankenGrotesk-ExtraBold.ttf");font-weight:800}
+:root{
+  --bg:#FDEDE6; --yellow:#F5AA16; --orange:#FFB35C; --peach:#FFCF92;
+  --brown:#2E1A0E; --soft:#FCDDB4; --cream:#FFF8F2;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#ccc;font-family:"Hanken";color:var(--brown)}
+.slide{width:1080px;height:1350px;background:var(--bg);position:relative;overflow:hidden;margin:20px auto}
+.badge{position:absolute;top:64px;left:72px;background:var(--yellow);color:var(--brown);font:800 46px/1 "Hanken";padding:16px 26px;border-radius:10px;z-index:3}
+.dots{position:absolute;display:grid;grid-template-columns:repeat(3,14px);gap:26px;z-index:2}
+.dots i{width:14px;height:14px;border-radius:50%;background:var(--yellow);display:block}
+.wave{position:absolute;left:0;bottom:0;width:1080px;height:300px;z-index:1}
+.content{position:absolute;inset:0;z-index:2;padding:0 90px}
+h1,h2{font-family:"Bodoni";font-weight:700;letter-spacing:-0.5px;line-height:1.02}
+.acc{color:var(--yellow)}
+.kicker{font:700 30px/1.2 "Hanken";letter-spacing:4px;text-transform:uppercase}
+.rule{width:150px;height:10px;border-radius:6px;background:var(--yellow)}
+p{font:400 34px/1.4 "Hanken"}
+b{font-weight:700}
+.handle{position:absolute;bottom:58px;right:80px;z-index:3;font:600 26px/1 "Hanken";letter-spacing:1px;color:var(--brown)}
+.swipe{position:absolute;bottom:58px;left:90px;z-index:3;font:700 28px/1 "Hanken";display:flex;align-items:center;gap:14px}
+svg .s{fill:none;stroke:var(--brown);stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+</style>
+</head>
+<body>
+
+<!-- ============ SLIDE 1 ============ -->
+<section class="slide" id="s1">
+  <div class="badge">1/6</div>
+  <div class="dots" style="top:70px;right:80px"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="content">
+    <div class="kicker" style="position:absolute;top:230px;left:90px">La tendance du moment</div>
+    <h1 style="position:absolute;top:290px;left:90px;font-size:132px;width:900px">Brasserie<br>ou <span class="acc">brewpub</span>&nbsp;?</h1>
+    <div class="rule" style="position:absolute;top:585px;left:90px"></div>
+    <p style="position:absolute;top:630px;left:90px;width:450px;font-size:34px">De plus en plus de porteurs de projet choisissent de <b>brasser et servir sur place</b>. Et si c'était votre modèle&nbsp;?</p>
+
+    <!-- Illustration brewpub -->
+    <svg style="position:absolute;top:560px;left:560px" width="480" height="540" viewBox="0 0 480 540">
+      <circle cx="250" cy="250" r="210" fill="var(--soft)"/>
+      <!-- suspensions -->
+      <line class="s" x1="130" y1="0" x2="130" y2="70"/><line class="s" x1="250" y1="0" x2="250" y2="55"/><line class="s" x1="370" y1="0" x2="370" y2="70"/>
+      <path d="M108 70 h44 l14 30 h-72 z" fill="var(--yellow)" class="s"/>
+      <path d="M228 55 h44 l14 30 h-72 z" fill="var(--yellow)" class="s"/>
+      <path d="M348 70 h44 l14 30 h-72 z" fill="var(--yellow)" class="s"/>
+      <!-- cuves -->
+      <g>
+        <path class="s" d="M70 170 q0 -30 50 -30 q50 0 50 30 v140 l-50 40 l-50 -40 z" fill="var(--cream)"/>
+        <path d="M74 250 h92 v58 l-46 37 l-46 -37 z" fill="var(--orange)" opacity=".9"/>
+        <path class="s" d="M70 170 q0 -30 50 -30 q50 0 50 30 v140 l-50 40 l-50 -40 z"/>
+        <line class="s" x1="80" y1="318" x2="76" y2="372"/><line class="s" x1="160" y1="318" x2="164" y2="372"/>
+        <line class="s" x1="120" y1="140" x2="120" y2="118"/>
+      </g>
+      <g>
+        <path class="s" d="M200 150 q0 -32 58 -32 q58 0 58 32 v160 l-58 44 l-58 -44 z" fill="var(--cream)"/>
+        <path d="M204 240 h108 v68 l-54 41 l-54 -41 z" fill="var(--yellow)" opacity=".9"/>
+        <path class="s" d="M200 150 q0 -32 58 -32 q58 0 58 32 v160 l-58 44 l-58 -44 z"/>
+        <line class="s" x1="212" y1="318" x2="206" y2="372"/><line class="s" x1="304" y1="318" x2="310" y2="372"/>
+      </g>
+      <path class="s" d="M120 118 h70 v-24 h68 v24"/>
+      <!-- tableau -->
+      <rect class="s" x="345" y="150" width="70" height="90" rx="6" fill="var(--cream)"/>
+      <line class="s" x1="358" y1="172" x2="402" y2="172"/><line class="s" x1="358" y1="192" x2="402" y2="192"/><line class="s" x1="358" y1="212" x2="390" y2="212"/>
+      <!-- comptoir -->
+      <rect class="s" x="30" y="372" width="420" height="20" rx="4" fill="var(--brown)"/>
+      <rect class="s" x="45" y="392" width="390" height="78" fill="var(--yellow)"/>
+      <line class="s" x1="45" y1="432" x2="435" y2="432" style="stroke-width:3;opacity:.5"/>
+      <!-- tireuse + verre -->
+      <path class="s" d="M330 372 v-46 h22 v-10 h-22" />
+      <path class="s" d="M370 372 l-6 -48 h40 l-6 48 z" fill="var(--orange)"/>
+      <path d="M364 330 q8 -14 20 -4 q10 -12 20 2 v8 h-40z" fill="var(--cream)" class="s"/>
+      <!-- tabourets -->
+      <g class="s"><ellipse cx="110" cy="490" rx="34" ry="9" fill="var(--brown)"/><line x1="96" y1="498" x2="88" y2="535"/><line x1="124" y1="498" x2="132" y2="535"/></g>
+      <g class="s"><ellipse cx="240" cy="490" rx="34" ry="9" fill="var(--brown)"/><line x1="226" y1="498" x2="218" y2="535"/><line x1="254" y1="498" x2="262" y2="535"/></g>
+      <g class="s"><ellipse cx="370" cy="490" rx="34" ry="9" fill="var(--brown)"/><line x1="356" y1="498" x2="348" y2="535"/><line x1="384" y1="498" x2="392" y2="535"/></g>
+    </svg>
+  </div>
+  <svg class="wave" viewBox="0 0 1080 300" preserveAspectRatio="none"><path d="M0 170 C260 90 460 230 700 150 C860 95 980 120 1080 90 V300 H0z" fill="var(--orange)"/><path d="M0 235 C300 170 520 290 780 220 C920 185 1010 200 1080 190 V300 H0z" fill="var(--peach)"/></svg>
+  <div class="swipe">Faites défiler <svg width="44" height="24" viewBox="0 0 44 24"><path class="s" d="M2 12 h38 M30 3 l10 9 l-10 9"/></svg></div>
+</section>
+
+<!-- ============ SLIDE 2 ============ -->
+<section class="slide" id="s2">
+  <div class="badge">2/6</div>
+  <div class="dots" style="top:70px;right:80px"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="content">
+    <div class="kicker" style="position:absolute;top:240px;left:0;right:0;text-align:center">Deux modèles</div>
+    <h2 style="position:absolute;top:295px;left:0;right:0;text-align:center;font-size:96px">Deux façons de<br><span class="acc">vendre sa bière.</span></h2>
+    <div class="rule" style="position:absolute;top:530px;left:465px"></div>
+
+    <div style="position:absolute;top:650px;left:90px;width:900px;display:flex;gap:0">
+      <div style="flex:1;text-align:center;padding:0 40px">
+        <svg width="190" height="190" viewBox="0 0 190 190"><circle cx="95" cy="95" r="90" fill="var(--soft)"/>
+          <path class="s" d="M62 50 h16 v18 q14 10 14 26 v52 q0 6 -6 6 h-32 q-6 0 -6 -6 v-52 q0 -16 14 -26 z" fill="var(--cream)"/>
+          <rect x="52" y="100" width="36" height="30" fill="var(--yellow)"/>
+          <path class="s" d="M62 50 h16 v18 q14 10 14 26 v52 q0 6 -6 6 h-32 q-6 0 -6 -6 v-52 q0 -16 14 -26 z"/>
+          <rect class="s" x="104" y="88" width="48" height="64" rx="10" fill="var(--orange)"/>
+          <line class="s" x1="104" y1="106" x2="152" y2="106"/><line class="s" x1="104" y1="134" x2="152" y2="134"/>
+        </svg>
+        <div style="font:800 40px/1.1 'Hanken';margin:26px 0 8px">BRASSERIE</div>
+        <div style="font:700 30px/1.1 'Hanken';color:var(--yellow);margin-bottom:22px">DE PRODUCTION</div>
+        <p style="font-size:30px">Vous brassez, <b>conditionnez</b> et distribuez&nbsp;: cavistes, bars, épiceries, vente directe.</p>
+      </div>
+      <div style="width:3px;background-image:linear-gradient(var(--yellow) 50%,transparent 50%);background-size:3px 14px"></div>
+      <div style="flex:1;text-align:center;padding:0 40px">
+        <svg width="190" height="190" viewBox="0 0 190 190"><circle cx="95" cy="95" r="90" fill="var(--soft)"/>
+          <path class="s" d="M58 62 h60 v84 q0 8 -8 8 h-44 q-8 0 -8 -8 z" fill="var(--yellow)"/>
+          <path class="s" d="M118 80 h12 q14 0 14 14 v20 q0 14 -14 14 h-12"/>
+          <path class="s" d="M54 64 q0 -20 20 -16 q10 -16 28 -6 q20 -6 20 16 z" fill="var(--cream)"/>
+          <line class="s" x1="76" y1="84" x2="76" y2="136"/><line class="s" x1="98" y1="84" x2="98" y2="136"/>
+        </svg>
+        <div style="font:800 40px/1.1 'Hanken';margin:26px 0 8px">BREWPUB</div>
+        <div style="font:700 30px/1.1 'Hanken';color:var(--yellow);margin-bottom:22px">BRASSER &amp; SERVIR</div>
+        <p style="font-size:30px">Vous brassez sur place et servez <b>votre bière au verre</b>, souvent avec une offre de restauration.</p>
+      </div>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1080 300" preserveAspectRatio="none"><path d="M0 200 C260 130 460 250 700 180 C860 130 980 150 1080 120 V300 H0z" fill="var(--orange)"/><path d="M0 255 C300 200 520 300 780 245 C920 215 1010 225 1080 215 V300 H0z" fill="var(--peach)"/></svg>
+</section>
+
+<!-- ============ SLIDE 3 ============ -->
+<section class="slide" id="s3">
+  <div class="badge">3/6</div>
+  <div class="dots" style="top:70px;right:80px"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="content">
+    <div class="kicker" style="position:absolute;top:200px;left:90px">Pourquoi ça séduit</div>
+    <h2 style="position:absolute;top:255px;left:90px;font-size:92px;width:900px">Le brewpub a le<br><span class="acc">vent en poupe.</span></h2>
+    <div class="rule" style="position:absolute;top:470px;left:90px"></div>
+
+    <div style="position:absolute;top:540px;left:90px;width:900px;display:grid;grid-template-columns:1fr 1fr;gap:56px 60px">
+      <div>
+        <svg width="110" height="110" viewBox="0 0 110 110"><circle cx="55" cy="55" r="52" fill="var(--yellow)"/>
+          <path class="s" d="M38 32 h34 l-4 50 h-26 z" fill="var(--cream)"/><path d="M41 52 h28 l-2 28 h-24z" fill="var(--orange)"/><path class="s" d="M38 32 h34 l-4 50 h-26 z"/>
+          <path class="s" d="M78 26 l3 7 l7 1 l-5 5 l1 7 l-6 -3 l-6 3 l1 -7 l-5 -5 l7 -1z" fill="var(--cream)" style="stroke-width:3"/></svg>
+        <div style="font:800 34px/1.15 'Hanken';margin:18px 0 8px">Une bière mieux valorisée</div>
+        <p style="font-size:28px">Vendue au verre, sans intermédiaire entre vous et votre client.</p>
+      </div>
+      <div>
+        <svg width="110" height="110" viewBox="0 0 110 110"><circle cx="55" cy="55" r="52" fill="var(--yellow)"/>
+          <path class="s" d="M36 34 q0 -10 19 -10 q19 0 19 10 v40 l-19 14 l-19 -14 z" fill="var(--cream)"/>
+          <path class="s" d="M74 52 h12 v12"/><path class="s" d="M80 64 h12 l-2 18 h-8z" fill="var(--orange)"/></svg>
+        <div style="font:800 34px/1.15 'Hanken';margin:18px 0 8px">De la cuve au verre</div>
+        <p style="font-size:28px">Avec des cuves de service, pas d'embouteillage obligatoire.</p>
+      </div>
+      <div>
+        <svg width="110" height="110" viewBox="0 0 110 110"><circle cx="55" cy="55" r="52" fill="var(--yellow)"/>
+          <path class="s" d="M28 56 l27 -24 l27 24" /><path class="s" d="M34 52 v32 h42 v-32" fill="var(--cream)"/>
+          <path class="s" d="M55 76 q-12 -8 -12 -16 q0 -7 7 -7 q5 0 5 5 q0 -5 5 -5 q7 0 7 7 q0 8 -12 16z" fill="var(--orange)" style="stroke-width:3"/></svg>
+        <div style="font:800 34px/1.15 'Hanken';margin:18px 0 8px">Un vrai lieu de vie</div>
+        <p style="font-size:28px">Vos clients voient brasser&nbsp;: la bière devient une expérience.</p>
+      </div>
+      <div>
+        <svg width="110" height="110" viewBox="0 0 110 110"><circle cx="55" cy="55" r="52" fill="var(--yellow)"/>
+          <path class="s" d="M24 46 q0 -14 14 -14 h22 q14 0 14 14 v6 q0 14 -14 14 h-12 l-12 10 v-10 q-12 -2 -12 -14 z" fill="var(--cream)"/>
+          <circle cx="40" cy="49" r="3" fill="var(--brown)"/><circle cx="50" cy="49" r="3" fill="var(--brown)"/><circle cx="60" cy="49" r="3" fill="var(--brown)"/>
+          <path class="s" d="M62 70 h14 q10 0 10 10 v2 q0 8 -8 10 v8 l-9 -8 h-7 q-10 0 -10 -10" fill="var(--orange)" style="stroke-width:3"/></svg>
+        <div style="font:800 34px/1.15 'Hanken';margin:18px 0 8px">Un retour immédiat</div>
+        <p style="font-size:28px">Vous testez vos recettes et recueillez l'avis de vos clients en direct.</p>
+      </div>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1080 300" preserveAspectRatio="none"><path d="M0 220 C260 160 460 270 700 205 C860 160 980 175 1080 150 V300 H0z" fill="var(--orange)"/><path d="M0 268 C300 225 520 300 780 262 C920 240 1010 248 1080 240 V300 H0z" fill="var(--peach)"/></svg>
+</section>
+
+<!-- ============ SLIDE 4 ============ -->
+<section class="slide" id="s4">
+  <div class="badge">4/6</div>
+  <div class="dots" style="top:70px;right:80px"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="content">
+    <div class="kicker" style="position:absolute;top:200px;left:90px">Bon à savoir</div>
+    <h2 style="position:absolute;top:255px;left:90px;font-size:92px;width:920px">Un brewpub,<br>c'est <span class="acc">deux métiers.</span></h2>
+    <p style="position:absolute;top:478px;left:90px;width:880px">Brasseur <b>et</b> exploitant de bar ou de restaurant. Quatre points à anticiper dès le départ&nbsp;:</p>
+
+    <div style="position:absolute;top:620px;left:90px;width:900px;display:grid;grid-template-columns:1fr 1fr;gap:28px">
+      <div style="display:flex;gap:22px;align-items:center;background:var(--cream);border:3px solid var(--brown);border-radius:14px;padding:22px 24px">
+        <svg width="70" height="70" viewBox="0 0 70 70"><path class="s" d="M35 64 q-22 -24 -22 -38 a22 22 0 0 1 44 0 q0 14 -22 38z" fill="var(--yellow)"/><circle class="s" cx="35" cy="26" r="8" fill="var(--cream)"/></svg>
+        <div><div style="font:800 30px/1.1 'Hanken'">L'emplacement</div><div style="font:400 24px/1.3 'Hanken';margin-top:4px">Passage, visibilité, accès</div></div>
+      </div>
+      <div style="display:flex;gap:22px;align-items:center;background:var(--cream);border:3px solid var(--brown);border-radius:14px;padding:22px 24px">
+        <svg width="70" height="70" viewBox="0 0 70 70"><rect class="s" x="14" y="10" width="42" height="52" rx="5" fill="var(--yellow)"/><rect class="s" x="26" y="5" width="18" height="10" rx="3" fill="var(--cream)"/><path class="s" d="M22 30 l4 4 l7 -7 M38 31 h10 M22 46 l4 4 l7 -7 M38 47 h10"/></svg>
+        <div><div style="font:800 30px/1.1 'Hanken'">La réglementation</div><div style="font:400 24px/1.3 'Hanken';margin-top:4px">Licence, normes ERP, hygiène</div></div>
+      </div>
+      <div style="display:flex;gap:22px;align-items:center;background:var(--cream);border:3px solid var(--brown);border-radius:14px;padding:22px 24px">
+        <svg width="70" height="70" viewBox="0 0 70 70"><rect class="s" x="8" y="12" width="54" height="46" rx="4" fill="var(--yellow)"/><path class="s" d="M8 34 h26 v24 M34 34 v-22 M46 34 h16"/></svg>
+        <div><div style="font:800 30px/1.1 'Hanken'">L'aménagement</div><div style="font:400 24px/1.3 'Hanken';margin-top:4px">Salle, cuves visibles, fluides</div></div>
+      </div>
+      <div style="display:flex;gap:22px;align-items:center;background:var(--cream);border:3px solid var(--brown);border-radius:14px;padding:22px 24px">
+        <svg width="70" height="70" viewBox="0 0 70 70"><circle class="s" cx="35" cy="35" r="26" fill="var(--yellow)"/><path class="s" d="M35 20 v16 l11 7"/></svg>
+        <div><div style="font:800 30px/1.1 'Hanken'">L'organisation</div><div style="font:400 24px/1.3 'Hanken';margin-top:4px">Horaires, équipe de service</div></div>
+      </div>
+    </div>
+
+    <div style="position:absolute;top:1015px;left:90px;width:900px;display:flex;border:3px solid var(--brown);border-radius:12px;overflow:hidden;background:var(--cream)">
+      <div style="background:var(--yellow);width:120px;display:flex;align-items:center;justify-content:center;border-right:3px solid var(--brown)">
+        <svg width="66" height="60" viewBox="0 0 66 60"><path class="s" d="M33 6 l28 48 h-56 z" fill="var(--yellow)"/><line class="s" x1="33" y1="24" x2="33" y2="38"/><circle cx="33" cy="46" r="3" fill="var(--brown)"/></svg>
+      </div>
+      <p style="padding:26px 30px;font-size:29px">Dans un brewpub, <b>l'emplacement fait souvent la réussite</b> du projet. C'est la première chose à valider.</p>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1080 300" preserveAspectRatio="none"><path d="M0 230 C260 180 460 280 700 220 C860 180 980 190 1080 170 V300 H0z" fill="var(--orange)"/><path d="M0 272 C300 235 520 300 780 268 C920 250 1010 256 1080 250 V300 H0z" fill="var(--peach)"/></svg>
+</section>
+
+<!-- ============ SLIDE 5 ============ -->
+<section class="slide" id="s5">
+  <div class="badge">5/6</div>
+  <div class="dots" style="top:70px;right:80px"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="content">
+    <div class="kicker" style="position:absolute;top:175px;left:0;right:0;text-align:center">Le comparatif</div>
+    <h2 style="position:absolute;top:228px;left:0;right:0;text-align:center;font-size:92px">En <span class="acc">un coup d'œil.</span></h2>
+
+    <div style="position:absolute;top:370px;left:90px;width:900px;border:3px solid var(--brown);border-radius:16px;overflow:hidden;background:var(--cream)">
+      <div style="display:grid;grid-template-columns:230px 1fr 1fr;background:var(--brown);color:var(--bg);font:800 28px/1 'Hanken'">
+        <div style="padding:24px"></div>
+        <div style="padding:24px;text-align:center">BRASSERIE</div>
+        <div style="padding:24px;text-align:center;background:var(--yellow);color:var(--brown)">BREWPUB</div>
+      </div>
+      <div id="rows"></div>
+    </div>
+
+    <div style="position:absolute;top:1030px;left:90px;width:900px;text-align:center">
+      <p style="font-size:30px">Et beaucoup de projets <b>combinent les deux</b>&nbsp;: un brewpub qui vend aussi en bouteilles ou en fûts.</p>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1080 300" preserveAspectRatio="none"><path d="M0 245 C260 200 460 290 700 238 C860 205 980 212 1080 195 V300 H0z" fill="var(--orange)"/><path d="M0 280 C300 250 520 300 780 278 C920 265 1010 270 1080 265 V300 H0z" fill="var(--peach)"/></svg>
+</section>
+
+<!-- ============ SLIDE 6 ============ -->
+<section class="slide" id="s6">
+  <div class="badge">6/6</div>
+  <div class="dots" style="top:70px;right:80px"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="content">
+    <!-- Illustration : trinquer -->
+    <svg style="position:absolute;top:120px;left:390px" width="300" height="260" viewBox="0 0 300 260">
+      <circle cx="150" cy="140" r="115" fill="var(--soft)"/>
+      <g transform="rotate(-16 100 150)">
+        <path class="s" d="M60 90 h70 v110 q0 10 -10 10 h-50 q-10 0 -10 -10 z" fill="var(--yellow)"/>
+        <path class="s" d="M60 110 h-14 q-14 0 -14 14 v34 q0 14 14 14 h14"/>
+        <path class="s" d="M56 92 q-2 -24 22 -20 q10 -16 28 -6 q24 -8 26 24 z" fill="var(--cream)"/>
+        <line class="s" x1="82" y1="120" x2="82" y2="190"/><line class="s" x1="106" y1="120" x2="106" y2="190"/>
+      </g>
+      <g transform="rotate(16 200 150)">
+        <path class="s" d="M170 90 h70 v110 q0 10 -10 10 h-50 q-10 0 -10 -10 z" fill="var(--orange)"/>
+        <path class="s" d="M240 110 h14 q14 0 14 14 v34 q0 14 -14 14 h-14"/>
+        <path class="s" d="M168 92 q2 -24 26 -18 q10 -16 28 -4 q24 -6 22 22 z" fill="var(--cream)"/>
+        <line class="s" x1="194" y1="120" x2="194" y2="190"/><line class="s" x1="218" y1="120" x2="218" y2="190"/>
+      </g>
+      <path class="s" d="M150 30 v-22 M120 40 l-12 -18 M180 40 l12 -18"/>
+    </svg>
+
+    <h2 style="position:absolute;top:410px;left:0;right:0;text-align:center;font-size:96px">Et vous, quel modèle<br><span class="acc">vous ressemble&nbsp;?</span></h2>
+    <div class="rule" style="position:absolute;top:640px;left:465px"></div>
+
+    <div style="position:absolute;top:700px;left:90px;width:900px;display:flex;justify-content:center;gap:28px">
+      <div style="background:var(--brown);color:var(--bg);font:800 30px/1 'Hanken';padding:22px 34px;border-radius:999px">BRASSERIE</div>
+      <div style="background:var(--yellow);color:var(--brown);font:800 30px/1 'Hanken';padding:22px 34px;border-radius:999px">BREWPUB</div>
+      <div style="background:var(--cream);color:var(--brown);border:3px solid var(--brown);font:800 30px/1 'Hanken';padding:19px 34px;border-radius:999px">LES DEUX</div>
+    </div>
+
+    <p style="position:absolute;top:830px;left:90px;width:900px;text-align:center;font-size:32px">Notre <b>étude de projet</b> est gratuite et sans engagement&nbsp;: dimensionnement, implantation, matériel.</p>
+
+    <div style="position:absolute;top:990px;left:180px;display:flex;align-items:center;gap:22px;z-index:3">
+      <svg width="74" height="64" viewBox="0 0 74 64"><path class="s" d="M6 10 q0 -6 6 -6 h50 q6 0 6 6 v30 q0 6 -6 6 h-34 l-14 12 v-12 h-2 q-6 0 -6 -6z" fill="var(--cream)"/><circle cx="24" cy="25" r="4" fill="var(--brown)"/><circle cx="37" cy="25" r="4" fill="var(--brown)"/><circle cx="50" cy="25" r="4" fill="var(--brown)"/></svg>
+      <div style="font:500 32px/1.25 'Hanken'">Dites-nous en commentaire,<br>on lit tout&nbsp;!</div>
+    </div>
+    <svg style="position:absolute;top:960px;left:720px;z-index:3" width="160" height="170" viewBox="0 0 160 170"><path d="M120 6 C150 60 130 120 50 140" fill="none" stroke="var(--brown)" stroke-width="6" stroke-linecap="round"/><path d="M72 112 L44 142 L84 156" fill="none" stroke="var(--brown)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div>
+  <svg class="wave" viewBox="0 0 1080 300" preserveAspectRatio="none"><path d="M0 200 C260 120 460 240 700 170 C860 120 980 140 1080 110 V300 H0z" fill="var(--orange)"/><path d="M0 255 C300 195 520 300 780 240 C920 210 1010 220 1080 210 V300 H0z" fill="var(--peach)"/></svg>
+  <div class="handle">brewfactory.fr</div>
+</section>
+
+<script>
+const rows=[
+ ["Vente","Distribution : cavistes, bars, épiceries","Sur place, au verre"],
+ ["Lieu","Local d'activité, accès livraison","Lieu passant et visible"],
+ ["Clé du projet","Conditionnement et logistique","Aménagement de la salle"],
+ ["Métiers","Brasseur et commercial","Brasseur et exploitant"],
+ ["Point fort","Volumes et notoriété de marque","Valorisation et expérience"]
+];
+document.getElementById('rows').innerHTML=rows.map((r,i)=>`
+ <div style="display:grid;grid-template-columns:230px 1fr 1fr;border-top:${i?'2px dashed #E9B97A':'none'}">
+  <div style="padding:22px 24px;font:800 27px/1.2 'Hanken'">${r[0]}</div>
+  <div style="padding:22px 22px;font:400 26px/1.3 'Hanken';text-align:center;border-left:2px solid #E9B97A">${r[1]}</div>
+  <div style="padding:22px 22px;font:600 26px/1.3 'Hanken';text-align:center;border-left:2px solid #E9B97A;background:#FFF0D6">${r[2]}</div>
+ </div>`).join('');
+</script>
+</body>
+</html>
