@@ -24,7 +24,7 @@ def caption(tag, text, title=None, client=None):
     t = f'<div class="title"><div class="box">{title}</div></div>' if title else ''
     tg = f'<div class="tag">{tag}</div>' if tag else ''
     bx = f'<div class="box">{text}</div>' if text else ''
-    return f'<div class="f"><img class="wm" src="{LOGO}">{t}{c}<div class="cap">{tg}{bx}</div></div>'
+    return f'<div class="f">{t}{c}<div class="cap">{tg}{bx}</div></div>'
 
 def card_end(line1, line2, sub, client=None):
     wave = '<svg style="position:absolute;left:0;bottom:0" width="1080" height="420" viewBox="0 0 1080 300" preserveAspectRatio="none"><path d="M0 170 C260 90 460 230 700 150 C860 95 980 120 1080 90 V300 H0z" fill="var(--orange)"/><path d="M0 235 C300 170 520 290 780 220 C920 185 1010 200 1080 190 V300 H0z" fill="var(--peach)"/></svg>'
