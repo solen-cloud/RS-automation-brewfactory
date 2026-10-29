@@ -40,7 +40,9 @@ for i, s in enumerate(spec['segments']):
         sp = s.get('speed', 1.0); vol = s.get('vol', 0.5)
         src_d = d * sp
         atempo = ','.join(['atempo=2.0'] * int(sp // 2) + ([f'atempo={sp / (2 ** int(sp // 2)):.4f}'] if sp % 2 else [])) if sp != 1 else 'anull'
-        vf = (f"[0:v]setpts=PTS/{sp},fps=30,{zoompan(n, s.get('zoom', 0.1), s.get('zin', True))}{flash}[v]")
+        z = s.get('zoom', 0)
+        zz = zoompan(n, z, s.get('zin', True)) if z else 'scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,setsar=1'
+        vf = (f"[0:v]setpts=PTS/{sp},fps=30,{zz}{flash}[v]")
         run(['ffmpeg', '-y', '-ss', str(s['start']), '-t', str(src_d), '-i', s['src'], '-loop', '1', '-t', str(d), '-i', png,
              '-filter_complex', f"{vf};{OVF};{OVL},format=yuv420p[vo];"
              f"[0:a]aresample=48000,{atempo},volume={vol},afade=t=in:d=0.06,afade=t=out:st={max(0, d - 0.08)}:d=0.08[ao]",
@@ -61,7 +63,18 @@ for i, s in enumerate(spec['segments']):
              '-map', '[vo]', '-map', amap, '-t', str(d)] + ENC + [o])
     parts.append(o)
 
-lst = os.path.join(work, 'list.txt')
-open(lst, 'w').write(''.join(f"file '{p}'\n" for p in parts))
-run(['ffmpeg', '-y', '-f', 'concat', '-safe', '0', '-i', lst, '-c', 'copy', '-movflags', '+faststart', out])
-print('ok', out)
+T = spec.get('trans_dur', 0.4)
+TR = spec.get('transitions', ['slideleft', 'smoothup', 'circleopen', 'slideup', 'smoothleft', 'wipeleft', 'slidedown', 'smoothright'])
+durs = [s['dur'] for s in spec['segments']]
+ins = []
+for p_ in parts: ins += ['-i', p_]
+fc = []; vlast = '[0:v]'; alast = '[0:a]'; acc = durs[0]
+for k in range(1, len(parts)):
+    tr = spec['segments'][k].get('trans') or TR[(k - 1) % len(TR)]
+    off = acc - T
+    fc.append(f"{vlast}[{k}:v]xfade=transition={tr}:duration={T}:offset={off:.3f}[v{k}]")
+    fc.append(f"{alast}[{k}:a]acrossfade=d={T}[a{k}]")
+    vlast, alast = f'[v{k}]', f'[a{k}]'
+    acc = off + durs[k]
+run(['ffmpeg', '-y'] + ins + ['-filter_complex', ';'.join(fc), '-map', vlast, '-map', alast] + ENC + ['-movflags', '+faststart', out])
+print('ok', out, round(acc, 2))
