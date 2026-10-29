@@ -19,16 +19,22 @@ html,body{background:transparent !important;margin:0}
 .title .box{font-size:84px;display:inline-block}
 """
 
-def caption(tag, text, title=None):
+def caption(tag, text, title=None, client=None):
+    c = f'<div style="position:absolute;top:600px;left:50%;transform:translateX(-50%);background:var(--bg);padding:28px 36px;border-radius:22px;box-shadow:0 12px 30px rgba(0,0,0,.25)"><img src="file://{client}" style="display:block;width:380px"></div>' if client else ''
     t = f'<div class="title"><div class="box">{title}</div></div>' if title else ''
     tg = f'<div class="tag">{tag}</div>' if tag else ''
     bx = f'<div class="box">{text}</div>' if text else ''
-    return f'<div class="f"><img class="wm" src="{LOGO}">{t}<div class="cap">{tg}{bx}</div></div>'
+    return f'<div class="f"><img class="wm" src="{LOGO}">{t}{c}<div class="cap">{tg}{bx}</div></div>'
 
-def card_end(line1, line2, sub):
+def card_end(line1, line2, sub, client=None):
     wave = '<svg style="position:absolute;left:0;bottom:0" width="1080" height="420" viewBox="0 0 1080 300" preserveAspectRatio="none"><path d="M0 170 C260 90 460 230 700 150 C860 95 980 120 1080 90 V300 H0z" fill="var(--orange)"/><path d="M0 235 C300 170 520 290 780 220 C920 185 1010 200 1080 190 V300 H0z" fill="var(--peach)"/></svg>'
+    if client:
+        duo = f'''<div style="position:absolute;top:330px;left:0;right:0;display:flex;align-items:center;justify-content:center;gap:40px">
+<img src="file://{client}" style="width:330px"><div style="font:700 90px/1 'Bodoni';color:var(--yellow)">×</div><img src="{LOGO}" style="width:400px"></div>'''
+    else:
+        duo = f'<img src="{LOGO}" style="position:absolute;top:470px;left:50%;transform:translateX(-50%);width:620px">'
     return f'''<div class="f" style="background:var(--bg)">
-<img src="{LOGO}" style="position:absolute;top:470px;left:50%;transform:translateX(-50%);width:620px">
+{duo}
 <h1 style="position:absolute;top:760px;left:0;right:0;text-align:center;font-size:104px">{line1}<br><span class="acc">{line2}</span></h1>
 <div class="rule" style="position:absolute;top:1030px;left:465px"></div>
 <p style="position:absolute;top:1080px;left:120px;right:120px;text-align:center;font-size:40px">{sub}</p>
@@ -52,7 +58,7 @@ if __name__ == '__main__':
     items = []
     for s in spec['segments']:
         if s['kind'] == 'end':
-            items.append((s['name'], card_end(*s['end'])))
+            items.append((s['name'], card_end(*s['end'], client=s.get('client'))))
         else:
-            items.append((s['name'], caption(s.get('tag'), s.get('text'), s.get('title'))))
+            items.append((s['name'], caption(s.get('tag'), s.get('text'), s.get('title'), s.get('client'))))
     asyncio.run(render(items, sys.argv[2]))
